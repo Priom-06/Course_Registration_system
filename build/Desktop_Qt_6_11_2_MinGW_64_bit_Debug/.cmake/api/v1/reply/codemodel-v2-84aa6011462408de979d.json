@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-5eab5f6130b2ac5d7a17.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Course_Registration_system",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Course_Registration_system::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Course_Registration_system-Debug-7f6e3be1c067773efe35.json",
+					"name" : "Course_Registration_system",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Course_Registration_system_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Course_Registration_system_autogen-Debug-bbfe2c3da7e19e771600.json",
+					"name" : "Course_Registration_system_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Course_Registration_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Course_Registration_system_autogen_timestamp_deps-Debug-4351e34b00e376fee31f.json",
+					"name" : "Course_Registration_system_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Laptop Click/OneDrive/Documents/Course_Registration_system/build/Desktop_Qt_6_11_2_MinGW_64_bit_Debug",
+		"source" : "C:/Users/Laptop Click/OneDrive/Documents/Course_Registration_system"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
