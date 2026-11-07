@@ -6,26 +6,189 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1050</width>
+    <height>720</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Course Registration System</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>18</height>
-    </rect>
-   </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+
+      <widget class="QWidget" name="loginPage">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QFrame" name="loginFrame">
+          <layout class="QVBoxLayout" name="verticalLayout_frame">
+           <item>
+            <widget class="QLabel" name="titleLabel">
+             <property name="font"><font><pointsize>16</pointsize><bold>true</bold></font></property>
+             <property name="text"><string>COURSE REGISTRATION SYSTEM</string></property>
+             <property name="alignment"><set>Qt::AlignCenter</set></property>
+            </widget>
+           </item>
+           <item><widget class="QLabel" name="userIdLabel"><property name="text"><string>User ID</string></property></widget></item>
+           <item><widget class="QLineEdit" name="userIdEdit"/></item>
+           <item><widget class="QLabel" name="passwordLabel"><property name="text"><string>Password</string></property></widget></item>
+           <item><widget class="QLineEdit" name="passwordEdit"><property name="echoMode"><enum>QLineEdit::Password</enum></property></widget></item>
+           <item><widget class="QLabel" name="roleLabel"><property name="text"><string>Role</string></property></widget></item>
+           <item>
+            <widget class="QComboBox" name="roleComboBox">
+             <item><property name="text"><string>Student</string></property></item>
+             <item><property name="text"><string>Adviser</string></property></item>
+             <item><property name="text"><string>Admin</string></property></item>
+            </widget>
+           </item>
+           <item><widget class="QPushButton" name="loginBtn"><property name="text"><string>LOGIN</string></property></widget></item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <widget class="QWidget" name="studentDashboard">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="studentHeader">
+          <item><widget class="QLabel" name="studentTitle"><property name="font"><font><pointsize>14</pointsize><bold>true</bold></font></property><property name="text"><string>STUDENT PORTAL - COURSE REGISTRATION</string></property></widget></item>
+          <item><widget class="QPushButton" name="logoutBtn1"><property name="text"><string>Logout</string></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="studentInfo">
+          <item><widget class="QLabel" name="studentNameLabel"><property name="font"><font><bold>true</bold></font></property><property name="text"><string>Name: User</string></property></widget></item>
+          <item><widget class="QLabel" name="semesterLabel"><property name="text"><string>Semester: Autumn-2026</string></property></widget></item>
+          <item><widget class="QLabel" name="deptLabel"><property name="text"><string>Department: CSE</string></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="availableTable">
+          <column><property name="text"><string>Select</string></property></column>
+          <column><property name="text"><string>Course Code</string></property></column>
+          <column><property name="text"><string>Course Name</string></property></column>
+          <column><property name="text"><string>Credit Hours</string></property></column>
+          <column><property name="text"><string>Section</string></property></column>
+          <column><property name="text"><string>Sub Section</string></property></column>
+          <column><property name="text"><string>Status</string></property></column>
+          <column><property name="text"><string>Remarks</string></property></column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="studentBottom">
+          <item><widget class="QLabel" name="totalCreditLabel"><property name="font"><font><pointsize>11</pointsize><bold>true</bold></font></property><property name="text"><string>Total Credit: 0.0 / 22.5</string></property></widget></item>
+          <item><widget class="QPushButton" name="studentConfirmBtn"><property name="text"><string>Confirm Registration</string></property></widget></item>
+          <item><widget class="QPushButton" name="studentDropBtn"><property name="text"><string>Withdraw / Drop Course</string></property></widget></item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+
+      <widget class="QWidget" name="adviserDashboard">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="adviserHeader">
+          <item><widget class="QLabel" name="adviserTitle"><property name="font"><font><pointsize>14</pointsize><bold>true</bold></font></property><property name="text"><string>Registration Manager (Adviser)</string></property></widget></item>
+          <item><widget class="QPushButton" name="logoutBtn2"><property name="text"><string>Logout</string></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="adviserControls">
+          <item>
+           <widget class="QComboBox" name="adviserSemesterCombo">
+            <item><property name="text"><string>Autumn-2026</string></property></item>
+            <item><property name="text"><string>Spring-2026</string></property></item>
+           </widget>
+          </item>
+          <item><widget class="QLabel" name="lblId"><property name="text"><string>Student ID:</string></property></widget></item>
+          <item><widget class="QLineEdit" name="adviserStudentIdEdit"><property name="placeholderText"><string>Enter Student ID (e.g. 1001)</string></property></widget></item>
+          <item><widget class="QLabel" name="adviserStudentNameLbl"><property name="font"><font><bold>true</bold></font></property><property name="text"><string>Name: -</string></property></widget></item>
+          <item><widget class="QPushButton" name="adviserLoadBtn"><property name="text"><string>Load</string></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="adviserTable">
+          <column><property name="text"><string>SL</string></property></column>
+          <column><property name="text"><string>Select</string></property></column>
+          <column><property name="text"><string>Course Code</string></property></column>
+          <column><property name="text"><string>Title</string></property></column>
+          <column><property name="text"><string>Cr</string></property></column>
+          <column><property name="text"><string>S</string></property></column>
+          <column><property name="text"><string>Status</string></property></column>
+          <column><property name="text"><string>Teacher</string></property></column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="adviserBottom">
+          <item><widget class="QLabel" name="adviserTotalCreditLbl"><property name="font"><font><bold>true</bold></font></property><property name="text"><string>Total Credit Hours: 0.0</string></property></widget></item>
+          <item><widget class="QPushButton" name="adviserAcceptBtn"><property name="text"><string>Accept Selected Courses</string></property></widget></item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+
+      <widget class="QWidget" name="adminDashboard">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <layout class="QHBoxLayout" name="adminHeader">
+          <item><widget class="QLabel" name="adminTitle"><property name="font"><font><pointsize>14</pointsize><bold>true</bold></font></property><property name="text"><string>ADMIN PANEL (COURSE MANAGEMENT)</string></property></widget></item>
+          <item><widget class="QPushButton" name="logoutBtn3"><property name="text"><string>Logout</string></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="searchLayout">
+          <item><widget class="QLabel" name="searchLbl"><property name="text"><string>Search Course:</string></property></widget></item>
+          <item><widget class="QLineEdit" name="adminSearchEdit"/></item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="adminTable">
+          <column><property name="text"><string>Course Code</string></property></column>
+          <column><property name="text"><string>Course Title</string></property></column>
+          <column><property name="text"><string>Credit Hours</string></property></column>
+          <column><property name="text"><string>Section</string></property></column>
+          <column><property name="text"><string>Sub Section</string></property></column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="adminInputs">
+          <item><widget class="QLineEdit" name="adminCodeEdit"><property name="placeholderText"><string>Course Code</string></property></widget></item>
+          <item><widget class="QLineEdit" name="adminTitleEdit"><property name="placeholderText"><string>Course Title</string></property></widget></item>
+          <item><widget class="QLineEdit" name="adminCreditEdit"><property name="placeholderText"><string>Credit (3.0)</string></property></widget></item>
+          <item><widget class="QLineEdit" name="adminSecEdit"><property name="placeholderText"><string>Section</string></property></widget></item>
+          <item><widget class="QLineEdit" name="adminSubSecEdit"><property name="placeholderText"><string>Sub Sec</string></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="adminBtns">
+          <item><widget class="QPushButton" name="adminAddBtn"><property name="text"><string>Add Course</string></property></widget></item>
+          <item><widget class="QPushButton" name="adminEditBtn"><property name="text"><string>Edit Selected</string></property></widget></item>
+          <item><widget class="QPushButton" name="adminDeleteBtn"><property name="text"><string>Delete Selected</string></property></widget></item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>logoutBtn2</sender>
+   <signal>clicked()</signal>
+   <receiver>logoutBtn1</receiver>
+   <slot>click()</slot>
+  </connection>
+  <connection>
+   <sender>logoutBtn3</sender>
+   <signal>clicked()</signal>
+   <receiver>logoutBtn1</receiver>
+   <slot>click()</slot>
+  </connection>
+ </connections>
 </ui>
